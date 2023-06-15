@@ -1,0 +1,42 @@
+$color-primary: #ff5722;
+$color-secondary:#F8F8F9;
+$color-black:#000;
+$color-white: #ffffff;
+$color-blue :#0065dc;
+$color-secondary-blue:#0c7dff;
+@font-face {
+    font-family: 'dana';
+    src: url(../fonts/dana-fanum-light.woff2), url(../fonts/dana-fanum-regular.woff2), url(../fonts/dana-fanum-medium.woff2), url(../fonts/dana-fanum-bold.woff2);
+}
+
+@font-face {
+    font-family: 'IranYekan' ;
+    src: url(../fonts/iranyekanweblight.woff2), url(../fonts/iranyekanwebregular.woff2);
+}
+$font-dana: 'dana',Tahoma,'Roboto';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: $font-dana;
+    font-weight: 400;
+    font-size: 16px;
+    box-sizing: border-box;
+    // overflow: hidden;
+}
+
+
+@mixin flex_style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centering($top_value){
+    position: absolute;
+    top: $top_value;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
