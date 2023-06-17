@@ -10,26 +10,52 @@
       width: 100%;
     }
   }
-  .nav-link {
-    cursor: pointer;
-    padding: 1rem;
-    margin-left: 1rem;
-    @media (max-width: 2560px) {
-      font-size: 2.5rem;
-    }
-    @media (max-width: 1440px) {
-      font-size: 1.7rem;
-    }
-    @media (max-width: 1024px) {
-      font-size: 1.5rem;
-    }
-    @media (min-width: 767px) {
-      font-size: 1.2rem;
-    }
-    @media (max-width: 575px) {
-      font-size: 1rem;
-    }
-  }
+
+  // .nav-link {
+  //   cursor: pointer;
+  //   padding: 1rem;
+  //   margin-left: 1rem;
+  //   @media (max-width: 2560px) {
+  //     font-size: 2.5rem;
+  //   }
+  //   @media (max-width: 1440px) {
+  //     font-size: 1.7rem;
+  //   }
+  //   @media (max-width: 1024px) {
+  //     font-size: 1.5rem;
+  //   }
+  //   @media (min-width: 767px) {
+  //     font-size: 1.2rem;
+  //     .navbar-collapse{
+
+  //       background-color: aqua;
+  //     }
+  //     text-align: right;
+  //   }
+  //   @media (max-width: 575px) {
+  //     font-size: 1rem;
+  //   }
+  // }
+
+    
+}
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left:0;
+}
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right:0;
+}
+.checkbox:checked~ .burger-menu .menu{
+  transform: rotateZ(90deg);
+}
+.checkbox:checked~ .burger-menu .menu-line-1{
+  transform: rotateZ(40deg);
+}
+.checkbox:checked~ .burger-menu .menu-line-2{
+  opacity: 1;
+}
+.checkbox:checked~ .burger-menu .menu-line-3{
+  transform: rotateZ(-40deg);
 }
 
 .hero {
@@ -834,19 +860,20 @@
   margin: 6rem 0;
   @media (max-width: 2560px) {
     padding: 60px;
-    margin-bottom: 15rem;
+    margin-bottom: 6rem;
   }
   @media (max-width: 1440px) {
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
   }
   @media (max-width: 1024px) {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
   @media (max-width: 768px) {
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
   }
   @media (max-width: 524px) {
     margin-bottom: 8rem;
+    padding: 1rem;
   }
 
   &-title {
@@ -854,7 +881,7 @@
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 3rem;
-    margin-right: 60px;
+    margin-right: 20px;
     @media (max-width: 2560px) {
       font-size: 2rem;
     }
@@ -865,10 +892,12 @@
       font-size: 1.5rem;
     }
     @media (max-width: 768px) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
     }
     @media (max-width: 575px) {
       font-size: 1.5rem;
+      width: 100%;
       margin-bottom: 1rem;
       padding: 2rem;
     }
@@ -876,6 +905,9 @@
 
   .cards {
     width: 100%;
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
     @media (max-width: 575px) {
       flex-direction: column;
     }
@@ -885,6 +917,18 @@
       height: 350px;
       width: 33.33333%;
       cursor: pointer;
+      @media (max-width: 2560px) {
+        width: 33.33333%;
+        height: auto;
+      }
+      @media (max-width: 1440px) {
+        width: 33.33333%;
+        height: auto;
+      }
+      @media (max-width: 1024px) {
+        width: 33.33333%;
+        height: auto;
+      }
       @media (max-width: 768px) {
         width: 100%;
         height: auto;

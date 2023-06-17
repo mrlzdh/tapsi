@@ -32,35 +32,29 @@
     width: 100%;
   }
 }
-.header .nav-link {
-  cursor: pointer;
-  padding: 1rem;
-  margin-left: 1rem;
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+  left: 0;
 }
-@media (max-width: 2560px) {
-  .header .nav-link {
-    font-size: 2.5rem;
-  }
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+  right: 0;
 }
-@media (max-width: 1440px) {
-  .header .nav-link {
-    font-size: 1.7rem;
-  }
+
+.checkbox:checked ~ .burger-menu .menu {
+  transform: rotateZ(90deg);
 }
-@media (max-width: 1024px) {
-  .header .nav-link {
-    font-size: 1.5rem;
-  }
+
+.checkbox:checked ~ .burger-menu .menu-line-1 {
+  transform: rotateZ(40deg);
 }
-@media (min-width: 767px) {
-  .header .nav-link {
-    font-size: 1.2rem;
-  }
+
+.checkbox:checked ~ .burger-menu .menu-line-2 {
+  opacity: 1;
 }
-@media (max-width: 575px) {
-  .header .nav-link {
-    font-size: 1rem;
-  }
+
+.checkbox:checked ~ .burger-menu .menu-line-3 {
+  transform: rotateZ(-40deg);
 }
 
 .hero {
@@ -1024,27 +1018,28 @@
 @media (max-width: 2560px) {
   .blog {
     padding: 60px;
-    margin-bottom: 15rem;
+    margin-bottom: 6rem;
   }
 }
 @media (max-width: 1440px) {
   .blog {
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 1024px) {
   .blog {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
 }
 @media (max-width: 768px) {
   .blog {
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 524px) {
   .blog {
     margin-bottom: 8rem;
+    padding: 1rem;
   }
 }
 .blog-title {
@@ -1052,7 +1047,7 @@
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 3rem;
-  margin-right: 60px;
+  margin-right: 20px;
 }
 @media (max-width: 2560px) {
   .blog-title {
@@ -1071,18 +1066,25 @@
 }
 @media (max-width: 768px) {
   .blog-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 575px) {
   .blog-title {
     font-size: 1.5rem;
+    width: 100%;
     margin-bottom: 1rem;
     padding: 2rem;
   }
 }
 .blog .cards {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .blog .cards {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 575px) {
   .blog .cards {
@@ -1094,6 +1096,24 @@
   height: 350px;
   width: 33.33333%;
   cursor: pointer;
+}
+@media (max-width: 2560px) {
+  .blog .cards .card {
+    width: 33.33333%;
+    height: auto;
+  }
+}
+@media (max-width: 1440px) {
+  .blog .cards .card {
+    width: 33.33333%;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .blog .cards .card {
+    width: 33.33333%;
+    height: auto;
+  }
 }
 @media (max-width: 768px) {
   .blog .cards .card {
@@ -1353,6 +1373,71 @@
   color: #9b9b9b;
 }
 
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: relative;
+}
+.navbar .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.navbar .nav-link {
+  transition: 0.7s ease;
+}
+.navbar .nav-link:hover {
+  color: #ff5722;
+}
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.navbar .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+@media (max-width: 768px) {
+  .navbar .hamburger {
+    display: block;
+  }
+  .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: right;
+    transition: 0.3s;
+  }
+  .navbar .nav-item {
+    margin: 16px 0;
+  }
+  .navbar .nav-menu.active {
+    left: 0;
+  }
+}
+
 .down-app {
   background-color: #ff5722;
   color: #ffffff;
@@ -1418,14 +1503,6 @@
   .logo {
     width: 90px;
   }
-}
-
-.nav-link {
-  font-size: 1rem;
-}
-
-.main-nav-img {
-  width: 60px;
 }
 
 .btn {
