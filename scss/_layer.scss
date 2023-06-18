@@ -36,8 +36,6 @@
   //     font-size: 1rem;
   //   }
   // }
-
-    
 }
 
 .hero {
@@ -95,10 +93,11 @@
 
     @media (max-width: 766px) {
       @include centering(50%);
-      width: 300px;
-      height: 80%;
+      width: 290px;
+      height: 90%;
+      align-items: center;
+      justify-content: center;
     }
-
     h1 {
       font-weight: 900;
       font-size: 3.5rem;
@@ -114,28 +113,39 @@
       }
     }
 
-    .app-box {
-      @include flex_style;
-      cursor: pointer;
-      border: 2px solid $color-white;
-      border-radius: 0.7rem;
-      width: 210px;
-      height: 50px;
-      margin: 4px;
-      margin-top: 1rem;
-    }
+    .hero-item-app {
+      @media (max-width:575px) {
+        width: 100%;
+        height: 100%;
+      }
 
-    .down-app-passenger {
-      background-color: $color-white;
-      color: $color-black;
-    }
+      .app-box {
+        @include flex_style;
+        cursor: pointer;
+        border: 2px solid $color-white;
+        border-radius: 0.7rem;
+        width: 210px;
+        height: 50px;
+        margin: 4px;
+        margin-top: 1rem;
+        @media (max-width: 575px) {
+          width: 100%;
+          margin: auto;
+        }
+      }
 
-    .pwa-app {
-      background-color: $color-white;
-      color: $color-black;
-
-      i {
+      .down-app-passenger {
+        background-color: $color-white;
         color: $color-black;
+      }
+
+      .pwa-app {
+        background-color: $color-white;
+        color: $color-black;
+
+        i {
+          color: $color-black;
+        }
       }
     }
   }
@@ -158,7 +168,6 @@
     }
   }
 
-  
   &-title {
     font-weight: 600;
     text-align: right;
@@ -218,11 +227,10 @@
             font-size: 0.8rem;
           }
           @media (max-width: 768px) {
-            
             font-size: 0.7rem;
           }
           @media (max-width: 575px) {
-            font-size: 0.5rem;
+            font-size: 0.8rem;
           }
         }
 
@@ -245,7 +253,7 @@
             width: 50px;
           }
           @media (max-width: 575px) {
-            width: 50px;
+            width: 80px;
           }
         }
 
@@ -271,12 +279,12 @@
   position: relative;
   width: 100%;
   // background-color: red;
-    align-items: center;
-    justify-content: center;
-    @media (max-width: 2560px) {
-      margin: 12px 0;
-      height: auto;
-    }
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 2560px) {
+    margin: 12px 0;
+    height: auto;
+  }
   @media (max-width: 766px) {
     width: 100%;
   }
@@ -309,12 +317,11 @@
         width: auto;
       }
       @media (max-width: 768px) {
-        width:auto;
+        width: auto;
       }
       @media (max-width: 575px) {
         display: none;
       }
-
     }
   }
 
@@ -350,10 +357,14 @@
       }
       @media (min-width: 768px) {
         width: 50%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin: auto;
       }
       @media (max-width: 575px) {
-        font-size: 2rem;
+        font-family: $font-danaBold !important;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
       }
     }
 
@@ -392,7 +403,7 @@
   @media (max-width: 575px) {
     margin-top: 1rem;
   }
-  
+
   &-business {
     margin-bottom: 4rem;
 
@@ -405,34 +416,34 @@
       width: 100%;
     }
     // @media (max-width: 575px) {
-      //   flex-direction: column;
-      //   width: 100%;
-      // }
+    //   flex-direction: column;
+    //   width: 100%;
+    // }
+  }
+
+  .buy-balance {
+    margin-bottom: 4rem;
+
+    @media (max-width: 2560px) {
+      flex-direction: row-reverse;
+      width: 100%;
     }
-    
-    .buy-balance {
-      margin-bottom: 4rem;
-      
-      @media (max-width: 2560px) {
-        flex-direction: row-reverse;
-        width: 100%;
-      }
-      @media (max-width: 1440px) {
-        flex-direction: row-reverse;
-        width: 100%;
-      }
-      @media (max-width: 1024px) {
-        flex-direction: row-reverse;
-        width: 100%;
-      }
-      @media (max-width: 768px) {
-        flex-direction: column;
-        width: 100%;
-      }
-      @media (max-width: 575px) {
-        flex-direction: column;
-        width: 100%;
-      }
+    @media (max-width: 1440px) {
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+    }
+    @media (max-width: 575px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   .left {
@@ -460,7 +471,7 @@
       padding: 40px;
       width: 100%;
     }
-    
+
     @media (max-width: 575px) {
       width: 100%;
       padding: 10px;
@@ -519,7 +530,7 @@
         font-size: 1.5rem;
       }
     }
-    
+
     p {
       text-align: justify;
       @media (max-width: 2560px) {
@@ -591,19 +602,19 @@
       text-align: center;
       cursor: pointer;
       padding: 10px 0;
-      @media (max-width:2560px) {
+      @media (max-width: 2560px) {
         font-size: 1rem;
       }
-      @media (max-width:1440px) {
+      @media (max-width: 1440px) {
         font-size: 1rem;
       }
-      @media (max-width:1024px) {
+      @media (max-width: 1024px) {
         font-size: 0.8rem;
       }
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         font-size: 1rem;
       }
-      @media (max-width:575px) {
+      @media (max-width: 575px) {
         font-size: 1rem;
       }
     }
@@ -614,19 +625,19 @@
       text-align: center;
       display: none;
       margin-top: 20px;
-      @media (max-width:2560px) {
+      @media (max-width: 2560px) {
         font-size: 1rem;
       }
-      @media (max-width:1440px) {
+      @media (max-width: 1440px) {
         font-size: 1rem;
       }
-      @media (max-width:1024px) {
+      @media (max-width: 1024px) {
         font-size: 0.8rem;
       }
-      @media (max-width:768px) {
+      @media (max-width: 768px) {
         font-size: 1rem;
       }
-      @media (max-width:575px) {
+      @media (max-width: 575px) {
         font-size: 1rem;
       }
     }
@@ -685,6 +696,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    font-family: $font-danaBold;
 
     @media (max-width: 2560px) {
       font-size: 2rem;
@@ -730,7 +742,8 @@
   .sub-title {
     font-weight: 600;
     font-size: 1.2rem;
-     @media (max-width: 2560px) {
+    font-family: $font-danaBold;
+    @media (max-width: 2560px) {
       font-size: 1.5rem;
     }
     @media (max-width: 1440px) {
@@ -815,7 +828,7 @@
       max-width: 100%;
       align-items: center;
       justify-content: center;
-      .btn{
+      .btn {
         width: 160px;
       }
       .btn span {
@@ -827,7 +840,7 @@
       max-width: 100%;
       align-items: center;
       justify-content: center;
-      .btn{
+      .btn {
         width: 200px;
       }
       .btn span {
@@ -865,7 +878,7 @@
     margin-bottom: 2rem;
   }
   @media (max-width: 524px) {
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
     padding: 1rem;
   }
 
@@ -875,6 +888,7 @@
     font-weight: 900;
     margin-bottom: 3rem;
     margin-right: 20px;
+    font-family: $font-danaBold;
     @media (max-width: 2560px) {
       font-size: 2rem;
     }
@@ -891,7 +905,6 @@
     @media (max-width: 575px) {
       font-size: 1.5rem;
       width: 100%;
-      margin-bottom: 1rem;
       padding: 2rem;
     }
   }
@@ -934,6 +947,7 @@
       &-title {
         font-weight: 600;
         margin-bottom: 1rem;
+        font-family: $font-danaBold;
 
         @media (max-width: 2560px) {
           font-size: 1.7rem;
@@ -960,6 +974,7 @@
         display: -webkit-box;
         overflow: hidden;
         text-align: justify;
+        font-family: $font-danaLight;
 
         @media (max-width: 2560px) {
           font-size: 1.5rem;
@@ -1015,9 +1030,8 @@
     display: grid;
     direction: rtl;
     grid-template-columns: repeat(8, auto);
-    
   }
-  
+
   .city {
     display: flex;
     flex-direction: column;
@@ -1108,7 +1122,9 @@
 
         @media (max-width: 766px) {
           font-size: 1.5rem;
+          font-family: $font-danaBold;
           line-height: 2;
+          margin-top: 1.5rem;
         }
       }
 
