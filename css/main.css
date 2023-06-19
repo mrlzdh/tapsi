@@ -30,19 +30,8 @@
 }
 
 .header {
-  background-color: #F8F8F9;
-}
-@media (max-width: 766px) {
-  .header .container {
-    width: 100%;
-    margin: 0 6px;
-    justify-content: space-between;
-  }
-}
-@media (max-width: 2560px) {
-  .header .container {
-    width: 100%;
-  }
+  background-color: #f8f8f9;
+  width: 100%;
 }
 
 .hero {
@@ -683,16 +672,25 @@
 @media (max-width: 768px) {
   .parallax .content-wrapper {
     flex-direction: column;
-    height: 60vh;
+    height: 30vh;
+  }
+}
+@media (max-width: 525px) {
+  .parallax .content-wrapper {
+    flex-direction: column;
+    height: 70vh;
   }
 }
 .parallax .content-wrapper .content-wrapper-col {
-  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   width: 24.5%;
   height: 100%;
 }
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .parallax .content-wrapper .content-wrapper-col {
     width: 100%;
     margin: 1rem;
@@ -728,12 +726,12 @@
 }
 @media (max-width: 768px) {
   .parallax .content-wrapper .title {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 575px) {
   .parallax .content-wrapper .title {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 .parallax .content-wrapper .sub-title {
@@ -741,7 +739,7 @@
   font-size: 1rem;
   text-align: center;
   display: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media (max-width: 2560px) {
   .parallax .content-wrapper .sub-title {
@@ -755,17 +753,17 @@
 }
 @media (max-width: 1024px) {
   .parallax .content-wrapper .sub-title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
   .parallax .content-wrapper .sub-title {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 }
 @media (max-width: 575px) {
   .parallax .content-wrapper .sub-title {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 .parallax .content-wrapper .separator {
@@ -799,12 +797,15 @@
     flex-direction: column !important;
   }
 }
-@media (max-width: 766px) {
+@media (max-width: 2560px) {
+  .drivers-left {
+    width: 50%;
+  }
   .drivers-left img {
     width: 100%;
   }
 }
-@media (max-width: 2560px) {
+@media (max-width: 768px) {
   .drivers-left {
     width: 100%;
   }
@@ -852,6 +853,7 @@
 }
 .drivers-description {
   text-align: justify;
+  color: #4d4d4d;
 }
 @media (max-width: 2560px) {
   .drivers-description {
@@ -880,9 +882,10 @@
   }
 }
 .drivers .sub-title {
-  font-weight: 600;
   font-size: 1.2rem;
-  font-family: danaBold, Tahoma, "Roboto";
+  font-family: danaMedium, Tahoma, "Roboto";
+  color: #4d4d4d;
+  margin-bottom: 20px;
 }
 @media (max-width: 2560px) {
   .drivers .sub-title {
@@ -907,7 +910,6 @@
 @media (max-width: 575px) {
   .drivers .sub-title {
     line-height: 2;
-    margin-bottom: 2rem;
   }
 }
 .drivers .sub-title span a {
@@ -940,6 +942,10 @@
     margin-bottom: 2rem;
   }
 }
+.drivers-description-feature-list {
+  margin-bottom: 50px;
+  color: #4d4d4d;
+}
 .drivers-description-feature-list li {
   text-align: justify;
 }
@@ -969,7 +975,7 @@
     text-align: right;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 2560px) {
@@ -1037,7 +1043,8 @@
 }
 
 .blog {
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 2560px) {
   .blog {
@@ -1069,8 +1076,6 @@
 .blog-title {
   text-align: right;
   font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 3rem;
   margin-right: 20px;
   font-family: danaBold, Tahoma, "Roboto";
 }
@@ -1092,7 +1097,6 @@
 @media (max-width: 768px) {
   .blog-title {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
   }
 }
 @media (max-width: 575px) {
@@ -1103,16 +1107,23 @@
   }
 }
 .blog .cards {
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 @media (max-width: 768px) {
   .blog .cards {
     margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 575px) {
   .blog .cards {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .blog .cards .card {
@@ -1147,6 +1158,9 @@
 }
 @media (max-width: 575px) {
   .blog .cards .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 6px;
     height: auto;
@@ -1169,12 +1183,12 @@
 }
 @media (max-width: 1024px) {
   .blog .cards .card-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
   .blog .cards .card-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 575px) {
@@ -1203,12 +1217,12 @@
 }
 @media (max-width: 1024px) {
   .blog .cards .card-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 768px) {
   .blog .cards .card-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 575px) {
@@ -1224,7 +1238,7 @@
   height: 50vh;
   width: 100%;
   overflow: hidden;
-  background: #F8F8F9;
+  background: #f8f8f9;
   padding: 40px 10%;
   position: relative;
   vertical-align: baseline;
@@ -1401,6 +1415,32 @@
   color: #9b9b9b;
 }
 
+@media (max-width: 2560px) {
+  .content {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 1440px) {
+  .content {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin: 0 6px;
+    justify-content: space-between;
+  }
+}
+
 .navbar {
   min-height: 70px;
   display: flex;
@@ -1408,6 +1448,7 @@
   align-items: center;
   padding: 0 10px;
   position: relative;
+  width: 100%;
 }
 .navbar .nav-menu {
   display: flex;
@@ -1469,18 +1510,19 @@
 .down-app {
   background-color: #ff5722;
   color: #ffffff;
-  width: 8rem;
+  font-family: danaLight, Tahoma, "Roboto";
+  width: 12rem;
   height: 3rem;
-  font-size: 1rem;
+  font-size: 16px;
   border-radius: 0.6rem;
-  font-weight: 400;
   border: none;
 }
 @media (min-width: 2560px) {
   .down-app {
-    font-size: 2rem;
-    width: 14rem;
+    font-size: 1rem;
+    width: 18rem;
     height: 4rem;
+    padding: 7px 40px;
   }
 }
 @media (max-width: 1440px) {
@@ -1505,7 +1547,6 @@
 
 .logo {
   width: 120px;
-  padding: 0.5rem;
 }
 @media (min-width: 2560px) {
   .logo {
@@ -1519,12 +1560,12 @@
 }
 @media (max-width: 1024px) {
   .logo {
-    width: 130px;
+    width: 100px;
   }
 }
 @media (max-width: 768px) {
   .logo {
-    width: 110px;
+    width: 90px;
   }
 }
 @media (max-width: 575px) {

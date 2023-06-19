@@ -1,57 +1,58 @@
 $color-primary: #ff5722;
-$color-secondary:#F8F8F9;
-$color-black:#000;
+$color-secondary: #f8f8f9;
+$color-black: #000;
 $color-white: #ffffff;
-$color-blue :#0065dc;
-$color-secondary-blue:#0c7dff;
+$color-blue: #0065dc;
+$color-secondary-blue: #0c7dff;
+$color-sub-text: #4d4d4d;
 @font-face {
-    font-family: danaLight;
-    src: url(../fonts/dana-fanum-light.woff2);
+  font-family: danaLight;
+  src: url(../fonts/dana-fanum-light.woff2);
 }
 @font-face {
-    font-family: danaRegular;
-    src: url(../fonts/dana-fanum-regular.woff2);
+  font-family: danaRegular;
+  src: url(../fonts/dana-fanum-regular.woff2);
 }
 @font-face {
-    font-family: danaMedium;
-    src: url(../fonts/dana-fanum-medium.woff2);
+  font-family: danaMedium;
+  src: url(../fonts/dana-fanum-medium.woff2);
 }
 @font-face {
-    font-family: danaBold;
-    src: url(../fonts/dana-fanum-bold.woff2);
+  font-family: danaBold;
+  src: url(../fonts/dana-fanum-bold.woff2);
 }
 
 @font-face {
-    font-family: 'IranYekan' ;
-    src: url(../fonts/iranyekanweblight.woff2), url(../fonts/iranyekanwebregular.woff2);
+  font-family: "IranYekan";
+  src: url(../fonts/iranyekanweblight.woff2),
+    url(../fonts/iranyekanwebregular.woff2);
 }
-$font-danaLight: danaLight,Tahoma,'Roboto';
-$font-danaRegular: danaRegular,Tahoma,'Roboto';
-$font-danaMedium: danaMedium,Tahoma,'Roboto';
-$font-danaBold: danaBold,Tahoma,'Roboto';
+$font-danaLight: danaLight, Tahoma, "Roboto";
+$font-danaRegular: danaRegular, Tahoma, "Roboto";
+$font-danaMedium: danaMedium, Tahoma, "Roboto";
+$font-danaBold: danaBold, Tahoma, "Roboto";
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: $font-danaRegular;
-    font-weight: 400;
-    font-size: 16px;
-    box-sizing: border-box;
-    // overflow: hidden;
-}
-
-
-@mixin flex_style{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: $font-danaRegular;
+  font-weight: 400;
+  font-size: 16px;
+  box-sizing: border-box;
+  // overflow: hidden;
 }
 
-@mixin centering($top_value){
-    position: absolute;
-    top: $top_value;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@mixin flex_style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centering($top_value) {
+  position: absolute;
+  top: $top_value;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
